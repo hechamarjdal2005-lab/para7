@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — Para Lamsa</title>
+  <meta name="description" content="Découvrez l'histoire de Para Lamsa, parapharmacie féminine à Madinat Arrahma.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="floating-particles" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">&#10047;</span> Para Lamsa
+      </a>
+      <div class="nav-overlay" id="nav-overlay"></div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html" class="active">À propos</a></li>
+        <li><a href="shop.html">Boutique</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="cart-toggle" aria-label="Ouvrir le panier">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h2>Mon Panier</h2>
+      <button class="cart-close" aria-label="Fermer">&times;</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-empty">
+      <div class="empty-icon">&#128722;</div>
+      <p>Votre panier est vide</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span class="cart-total-price">0 DH</span>
+      </div>
+      <button class="btn-whatsapp" onclick="orderViaWhatsApp()">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        Commander via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="hero-decor d1"></div>
+    <div class="hero-decor d2"></div>
+    <div class="hero-content anim">
+      <h1>Notre Histoire</h1>
+    </div>
+  </section>
+
+  <!-- ===== STORY ===== -->
+  <section class="story-section py-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-image anim">
+          <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=600&h=450&fit=crop" alt="Intérieur de Para Lamsa">
+        </div>
+        <div class="story-text anim delay-1">
+          <span class="section-label">Notre Histoire</span>
+          <h2>Fondée par des femmes, pour les femmes</h2>
+          <p>Para Lamsa est née d'une passion profonde pour le bien-être et la beauté naturelle. En tant que parapharmacie fondée et dirigée par des femmes, nous comprenons les besoins uniques de notre communauté.</p>
+          <p>Depuis notre ouverture à Madinat Arrahma, nous avons bâti bien plus qu'un simple magasin — nous avons créé un espace de confiance, de chaleur et de partage. Chaque cliente qui franchit notre porte est accueillie comme une amie.</p>
+          <p>Notre mission est simple : vous offrir des produits de qualité, des conseils personnalisés et un accueil qui vous fait sentir chez vous. Parce que prendre soin de soi devrait être un moment de douceur, pas une corvée.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VALUES ===== -->
+  <section class="py-section" style="background: var(--blush-light);">
+    <div class="container text-center">
+      <span class="section-label anim">Nos Valeurs</span>
+      <h2 class="section-title anim delay-1">Ce qui nous anime</h2>
+      <p class="section-subtitle anim delay-2">Des principes qui guident chacune de nos actions</p>
+      <div class="values-grid stagger-children">
+        <div class="value-card">
+          <div class="why-icon">&#127793;</div>
+          <h3>Chaleur Humaine</h3>
+          <p>Un accueil sincère et un sourire à chaque visite — c'est notre signature.</p>
+        </div>
+        <div class="value-card">
+          <div class="why-icon">&#11088;</div>
+          <h3>Qualité Rigoureuse</h3>
+          <p>Chaque produit est soigneusement sélectionné pour son efficacité et sa sécurité.</p>
+        </div>
+        <div class="value-card">
+          <div class="why-icon">&#128149;</div>
+          <h3>Soins Personnalisés</h3>
+          <p>Des conseils sur mesure, adaptés à votre peau, votre corps et votre style de vie.</p>
+        </div>
+        <div class="value-card">
+          <div class="why-icon">&#128105;&#8205;&#128187;</div>
+          <h3>Entreprise Féminine</h3>
+          <p>Dirigée par des femmes, avec la force et la douceur qui en découlent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY / STORE PHOTOS ===== -->
+  <section class="py-section">
+    <div class="container text-center">
+      <span class="section-label anim">Nos Espaces</span>
+      <h2 class="section-title anim delay-1">Découvrez Para Lamsa</h2>
+      <p class="section-subtitle anim delay-2">Un espace chaleureux pensé pour votre confort</p>
+      <div class="categories-grid stagger-children">
+        <div class="category-card" style="cursor: default;">
+          <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=500&h=625&fit=crop" alt="Nos rayons" class="category-card-img">
+          <div class="category-card-overlay">
+            <h3>Nos Rayons</h3>
+          </div>
+        </div>
+        <div class="category-card" style="cursor: default;">
+          <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=500&h=625&fit=crop" alt="Nos produits" class="category-card-img">
+          <div class="category-card-overlay">
+            <h3>Nos Produits</h3>
+          </div>
+        </div>
+        <div class="category-card" style="cursor: default;">
+          <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=500&h=625&fit=crop" alt="L'espace conseil" class="category-card-img">
+          <div class="category-card-overlay">
+            <h3>L'Espace Conseil</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>&#10047; Para Lamsa</h4>
+          <p>Votre parapharmacie de confiance à Madinat Arrahma. Un accueil chaleureux, des produits de qualité et des conseils personnalisés.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">&#9737;</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="WhatsApp">&#9900;</a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <p><a href="index.html">Accueil</a></p>
+          <p><a href="about.html">À propos</a></p>
+          <p><a href="shop.html">Boutique</a></p>
+          <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+          <h4>Horaires</h4>
+          <p>Lun — Sam</p>
+          <p>10h30 — 22h00</p>
+          <p style="margin-top: 12px;"><a href="tel:+212660137363">06 60 13 73 63</a></p>
+        </div>
+        <div>
+          <h4>Adresse</h4>
+          <p>GH2.1 N°346, Complexe Résidentiel<br>Diyar Alalia, Arrahma 27223<br>Morocco</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Parapharmacie Para Lamsa. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

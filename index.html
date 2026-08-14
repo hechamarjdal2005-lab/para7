@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parapharmacie Para Lamsa — Madinat Arrahma</title>
+  <meta name="description" content="Para Lamsa — Une touche de douceur pour votre bien-être. Parapharmacie à Madinat Arrahma, Maroc.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Floating decorative particles -->
+  <div class="floating-particles" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">&#10047;</span> Para Lamsa
+      </a>
+      <div class="nav-overlay" id="nav-overlay"></div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="shop.html">Boutique</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="cart-toggle" aria-label="Ouvrir le panier">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h2>Mon Panier</h2>
+      <button class="cart-close" aria-label="Fermer le panier">&times;</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-empty">
+      <div class="empty-icon">&#128722;</div>
+      <p>Votre panier est vide</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span class="cart-total-price">0 DH</span>
+      </div>
+      <button class="btn-whatsapp" onclick="orderViaWhatsApp()">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        Commander via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-decor d1"></div>
+    <div class="hero-decor d2"></div>
+    <div class="hero-decor d3"></div>
+    <div class="hero-decor d4"></div>
+    <div class="hero-content anim">
+      <h1>Para Lamsa</h1>
+      <p class="hero-tagline">Une touche de douceur pour votre bien-être</p>
+      <a href="shop.html" class="btn btn-primary">Découvrir la boutique</a>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES ===== -->
+  <section class="py-section">
+    <div class="container text-center">
+      <span class="section-label anim">Nos Univers</span>
+      <h2 class="section-title anim delay-1">Explorez nos catégories</h2>
+      <p class="section-subtitle anim delay-2">Des soins pensés avec amour pour chaque besoin</p>
+      <div class="categories-grid stagger-children">
+        <a href="shop.html?cat=skincare" class="category-card">
+          <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=500&h=625&fit=crop" alt="Soins du Visage" class="category-card-img">
+          <div class="category-card-overlay">
+            <h3>Soins du Visage</h3>
+            <span>12 produits</span>
+          </div>
+        </a>
+        <a href="shop.html?cat=personal-care" class="category-card">
+          <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=500&h=625&fit=crop" alt="Hygiène & Soin" class="category-card-img">
+          <div class="category-card-overlay">
+            <h3>Hygiène & Soin</h3>
+            <span>10 produits</span>
+          </div>
+        </a>
+        <a href="shop.html?cat=wellness" class="category-card">
+          <img src="https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=500&h=625&fit=crop" alt="Bien-Être" class="category-card-img">
+          <div class="category-card-overlay">
+            <h3>Bien-Être</h3>
+            <span>8 produits</span>
+          </div>
+        </a>
+        <a href="shop.html?cat=gift-sets" class="category-card">
+          <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=500&h=625&fit=crop" alt="Coffrets Cadeaux" class="category-card-img">
+          <div class="category-card-overlay">
+            <h3>Coffrets Cadeaux</h3>
+            <span>6 produits</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section class="py-section" style="background: var(--off-white);">
+    <div class="container text-center">
+      <span class="section-label anim">Nos Bestsellers</span>
+      <h2 class="section-title anim delay-1">Les coups de cœur</h2>
+      <p class="section-subtitle anim delay-2">Les produits préférés de nos clientes</p>
+      <div class="products-grid stagger-children" id="featured-products"></div>
+      <a href="shop.html" class="btn btn-outline anim" style="margin-top: 32px;">Voir toute la boutique</a>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="py-section">
+    <div class="container text-center">
+      <span class="section-label anim">Pourquoi Nous</span>
+      <h2 class="section-title anim delay-1">Ce qui nous rend uniques</h2>
+      <p class="section-subtitle anim delay-2">Bien plus qu'une parapharmacie — un lieu de confiance</p>
+      <div class="why-grid stagger-children">
+        <div class="why-card">
+          <div class="why-icon">&#10084;&#65039;</div>
+          <h3>Accueil chaleureux</h3>
+          <p>Un espace où vous vous sentez immédiatement chez vous, avec le sourire.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#11088;</div>
+          <h3>Produits de qualité</h3>
+          <p>Une sélection rigoureuse pour vous offrir le meilleur.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#128161;</div>
+          <h3>Conseils personnalisés</h3>
+          <p>Un accompagnement détaillé adapté à vos besoins.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#128170;</div>
+          <h3>Entreprise féminine</h3>
+          <p>Fondée et dirigée par une femme, avec passion et cœur.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#128230;</div>
+          <h3>Retrait & Livraison</h3>
+          <p>En magasin, à emporter, ou livré chez vous — comme vous préférez.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="py-section testimonials-section">
+    <div class="container text-center">
+      <span class="section-label anim">Avis Clients</span>
+      <h2 class="section-title anim delay-1">Ce que disent nos clientes</h2>
+      <div class="testimonials-rating anim delay-2">
+        <span class="big-number">4.9</span>
+        <div>
+          <div class="animated-stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+          <span class="stars-text">Basé sur 28 avis</span>
+        </div>
+      </div>
+      <div class="testimonials-grid stagger-children">
+        <div class="testimonial-card">
+          <div class="testimonial-stars animated-stars">
+            <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+          </div>
+          <p class="testimonial-text">J'adore Para Lamsa ! L'accueil est toujours chaleureux et les conseils sont vraiment adaptés à mes besoins. C'est ma parapharmacie préférée à Arrahma.</p>
+          <p class="testimonial-author">— Fatima Z.</p>
+          <div class="testimonial-reply">
+            <strong>Para Lamsa :</strong> Merci beaucoup Fatima ! Votre satisfaction est notre plus belle récompense. On vous attend bientôt &#10047;
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars animated-stars">
+            <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+          </div>
+          <p class="testimonial-text">Les produits sont excellents et le service de livraison est super pratique. J'ai recommandé à toutes mes amies !</p>
+          <p class="testimonial-author">— Salma B.</p>
+          <div class="testimonial-reply">
+            <strong>Para Lamsa :</strong> Merci Salma ! On est ravi de vous compter parmi nos clientes fidèles &#10047;
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars animated-stars">
+            <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+          </div>
+          <p class="testimonial-text">Enfin une parapharmacie où on prend le temps de bien nous conseiller. Les coffrets cadeaux sont magnifiques !</p>
+          <p class="testimonial-author">— Nadia L.</p>
+          <div class="testimonial-reply">
+            <strong>Para Lamsa :</strong> Merci Nadia ! On prépare tout avec amour pour vous faire plaisir &#10047;
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>&#10047; Para Lamsa</h4>
+          <p>Votre parapharmacie de confiance à Madinat Arrahma. Un accueil chaleureux, des produits de qualité et des conseils personnalisés — parce que vous méritez le meilleur.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">&#9737;</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="WhatsApp">&#9900;</a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <p><a href="index.html">Accueil</a></p>
+          <p><a href="about.html">À propos</a></p>
+          <p><a href="shop.html">Boutique</a></p>
+          <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+          <h4>Horaires</h4>
+          <p>Lun — Sam</p>
+          <p>10h30 — 22h00</p>
+          <p style="margin-top: 12px;"><a href="tel:+212660137363">06 60 13 73 63</a></p>
+        </div>
+        <div>
+          <h4>Adresse</h4>
+          <p>GH2.1 N°346, Complexe Résidentiel<br>Diyar Alalia, Arrahma 27223<br>Morocco</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Parapharmacie Para Lamsa. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Populate featured products (bestsellers only)
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('featured-products');
+      const featured = PRODUCTS.filter(p => p.bestseller);
+      container.innerHTML = featured.map(p => `
+        <div class="product-card">
+          <div class="product-card-img-wrap">
+            <img src="${p.image}" alt="${p.name}" class="product-card-img">
+            <span class="product-badge">Bestseller</span>
+          </div>
+          <div class="product-card-body">
+            <h3>${p.name}</h3>
+            <p class="price">${p.price} DH</p>
+            <button class="btn btn-primary btn-add-cart" data-product-id="${p.id}">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+              Ajouter au panier
+            </button>
+          </div>
+        </div>
+      `).join('');
+    });
+  </script>
+</body>
+</html>

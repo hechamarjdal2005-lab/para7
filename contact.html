@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Para Lamsa</title>
+  <meta name="description" content="Contactez Para Lamsa — Madinat Arrahma, Maroc. Livraison, retrait en magasin et conseils personnalisés.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="floating-particles" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">&#10047;</span> Para Lamsa
+      </a>
+      <div class="nav-overlay" id="nav-overlay"></div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="shop.html">Boutique</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="cart-toggle" aria-label="Ouvrir le panier">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h2>Mon Panier</h2>
+      <button class="cart-close" aria-label="Fermer">&times;</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-empty">
+      <div class="empty-icon">&#128722;</div>
+      <p>Votre panier est vide</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span class="cart-total-price">0 DH</span>
+      </div>
+      <button class="btn-whatsapp" onclick="orderViaWhatsApp()">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        Commander via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="hero-decor d1"></div>
+    <div class="hero-decor d2"></div>
+    <div class="hero-content anim">
+      <h1>Contactez-Nous</h1>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT CONTENT ===== -->
+  <section class="py-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div class="contact-form anim">
+          <h2 style="margin-bottom: 8px;">Envoyez-nous un message</h2>
+          <p style="color: var(--text-light); margin-bottom: 28px; font-size: .92rem;">Nous vous répondrons dans les plus brefs délais.</p>
+          <form id="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Votre nom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone (optionnel)</label>
+              <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00">
+            </div>
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <select id="subject" name="subject" required>
+                <option value="">Choisir un sujet...</option>
+                <option value="commande">Question sur une commande</option>
+                <option value="produit">Renseignement produit</option>
+                <option value="livraison">Livraison</option>
+                <option value="conseil">Demande de conseil</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Envoyer le message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="anim delay-1">
+          <div class="contact-info-card">
+            <h3>Nos Coordonnées</h3>
+            <div class="info-item">
+              <div class="info-icon">&#128205;</div>
+              <div>
+                <h4>Adresse</h4>
+                <p>GH2.1 N°346, Complexe Résidentiel Diyar Alalia, Arrahma 27223, Morocco</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">&#128222;</div>
+              <div>
+                <h4>Téléphone / WhatsApp</h4>
+                <p><a href="tel:+212660137363" style="color: var(--rose-deep); font-weight: 500;">06 60 13 73 63</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">&#128337;</div>
+              <div>
+                <h4>Horaires d'ouverture</h4>
+                <p>Lundi — Samedi : 10h30 — 22h00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Delivery Options -->
+          <div class="contact-info-card" style="margin-top: 20px;">
+            <h3>Nos Services</h3>
+            <div class="delivery-options">
+              <div class="delivery-option">
+                <span class="dot"></span>
+                Shopping en magasin
+              </div>
+              <div class="delivery-option">
+                <span class="dot"></span>
+                Retrait en magasin (click & collect)
+              </div>
+              <div class="delivery-option">
+                <span class="dot"></span>
+                Livraison à domicile
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="contact-map" style="margin-top: 20px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-7.5!3d33.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMwJzAwLjAiTiA3wrAzMCcwMC4wIlc!5e0!3m2!1sfr!2sma!4v1234567890"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localisation Para Lamsa">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>&#10047; Para Lamsa</h4>
+          <p>Votre parapharmacie de confiance à Madinat Arrahma.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">&#9737;</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="WhatsApp">&#9900;</a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <p><a href="index.html">Accueil</a></p>
+          <p><a href="about.html">À propos</a></p>
+          <p><a href="shop.html">Boutique</a></p>
+          <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+          <h4>Horaires</h4>
+          <p>Lun — Sam</p>
+          <p>10h30 — 22h00</p>
+          <p style="margin-top: 12px;"><a href="tel:+212660137363">06 60 13 73 63</a></p>
+        </div>
+        <div>
+          <h4>Adresse</h4>
+          <p>GH2.1 N°346, Complexe Résidentiel<br>Diyar Alalia, Arrahma 27223<br>Morocco</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Parapharmacie Para Lamsa. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '&#10004; Message envoyé !';
+      btn.style.background = 'var(--gold)';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.background = '';
+        btn.disabled = false;
+        e.target.reset();
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique — Para Lamsa</title>
+  <meta name="description" content="Découvrez tous nos produits Para Lamsa — soins, bien-être et coffrets cadeaux.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="floating-particles" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">&#10047;</span> Para Lamsa
+      </a>
+      <div class="nav-overlay" id="nav-overlay"></div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="shop.html" class="active">Boutique</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="cart-toggle" aria-label="Ouvrir le panier">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h2>Mon Panier</h2>
+      <button class="cart-close" aria-label="Fermer">&times;</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-empty">
+      <div class="empty-icon">&#128722;</div>
+      <p>Votre panier est vide</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span class="cart-total-price">0 DH</span>
+      </div>
+      <button class="btn-whatsapp" onclick="orderViaWhatsApp()">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        Commander via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="hero-decor d1"></div>
+    <div class="hero-decor d2"></div>
+    <div class="hero-content anim">
+      <h1>Notre Boutique</h1>
+    </div>
+  </section>
+
+  <!-- ===== SHOP CONTENT ===== -->
+  <section class="py-section">
+    <div class="container">
+      <div class="search-bar anim">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="search-input" placeholder="Rechercher un produit...">
+      </div>
+
+      <div class="shop-filters anim delay-1" id="shop-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="skincare">Soins du Visage</button>
+        <button class="filter-btn" data-filter="personal-care">Hygiène & Soin</button>
+        <button class="filter-btn" data-filter="wellness">Bien-Être</button>
+        <button class="filter-btn" data-filter="gift-sets">Coffrets Cadeaux</button>
+      </div>
+
+      <div class="products-grid stagger-children" id="shop-products"></div>
+      <p id="no-results" style="display:none; text-align:center; color:var(--text-muted); padding:60px 20px; font-size:1.1rem;">
+        Aucun produit trouvé pour cette recherche.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>&#10047; Para Lamsa</h4>
+          <p>Votre parapharmacie de confiance à Madinat Arrahma.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">&#9737;</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="WhatsApp">&#9900;</a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <p><a href="index.html">Accueil</a></p>
+          <p><a href="about.html">À propos</a></p>
+          <p><a href="shop.html">Boutique</a></p>
+          <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+          <h4>Horaires</h4>
+          <p>Lun — Sam</p>
+          <p>10h30 — 22h00</p>
+          <p style="margin-top: 12px;"><a href="tel:+212660137363">06 60 13 73 63</a></p>
+        </div>
+        <div>
+          <h4>Adresse</h4>
+          <p>GH2.1 N°346, Complexe Résidentiel<br>Diyar Alalia, Arrahma 27223<br>Morocco</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Parapharmacie Para Lamsa. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('shop-products');
+      const noResults = document.getElementById('no-results');
+      const searchInput = document.getElementById('search-input');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      let activeFilter = 'all';
+      let searchTerm = '';
+
+      // Check URL for category param
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlCat = urlParams.get('cat');
+      if (urlCat && CATEGORIES[urlCat]) {
+        activeFilter = urlCat;
+        filterBtns.forEach(b => {
+          b.classList.toggle('active', b.dataset.filter === urlCat);
+        });
+      }
+
+      function renderProducts() {
+        let products = PRODUCTS;
+        if (activeFilter !== 'all') {
+          products = products.filter(p => p.category === activeFilter);
+        }
+        if (searchTerm) {
+          const term = searchTerm.toLowerCase();
+          products = products.filter(p => p.name.toLowerCase().includes(term));
+        }
+        if (products.length === 0) {
+          container.innerHTML = '';
+          noResults.style.display = 'block';
+          return;
+        }
+        noResults.style.display = 'none';
+        container.innerHTML = products.map(p => `
+          <div class="product-card">
+            <div class="product-card-img-wrap">
+              <img src="${p.image}" alt="${p.name}" class="product-card-img">
+              ${p.bestseller ? '<span class="product-badge">Bestseller</span>' : ''}
+            </div>
+            <div class="product-card-body">
+              <h3>${p.name}</h3>
+              <p class="price">${p.price} DH</p>
+              <button class="btn btn-primary btn-add-cart" data-product-id="${p.id}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeFilter = btn.dataset.filter;
+          renderProducts();
+        });
+      });
+
+      searchInput.addEventListener('input', (e) => {
+        searchTerm = e.target.value;
+        renderProducts();
+      });
+
+      renderProducts();
+    });
+  </script>
+</body>
+</html>
